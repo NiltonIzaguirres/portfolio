@@ -1,3 +1,9 @@
+import styled from "styled-components";
+
+const Text = styled.h1`
+  color: red;
+`;
+
 export default function Home() {
-  return <h1>Hello Word!</h1>;
+  return <Text>Hello Word!</Text>;
 }
