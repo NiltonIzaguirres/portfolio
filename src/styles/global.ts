@@ -19,6 +19,11 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  body {
+    background: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.text};
+  }
+
   body, input, textarea, select, button {
     font: 400 1rem 'Inter' sans-serif;
   }
