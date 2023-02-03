@@ -7,17 +7,17 @@ const DEFAULT_OG_IMAGE =
 interface SEOProps {
   title: string;
   description: string;
-  siteName: string;
-  canonical: string;
-  ogImage: string;
-  ogType: string;
-  twitterHandle: string;
+  siteName?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterHandle?: string;
   routeName: string;
 }
 
 export function SEO({
-  title = "Page",
-  description = "",
+  title,
+  description,
   siteName = "Nilton Izaguirres",
   canonical = DOMAIN,
   ogImage = DEFAULT_OG_IMAGE,
