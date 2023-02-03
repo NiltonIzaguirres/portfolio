@@ -26,7 +26,7 @@ export function Header() {
   const { locale, push } = useRouter();
 
   const currentLocale = locale === "en-US" ? "en-US" : "pt-BR";
-  const transitions = headerTranslate[currentLocale];
+  const translations = headerTranslate[currentLocale];
 
   function toggleLanguage() {
     push("/", "/", { locale: locale === "en-US" ? "pt-BR" : "en-US" });
@@ -71,8 +71,8 @@ export function Header() {
           </Link>
 
           <LinkList isOpenMobileMenu={isOpenMobileMenu}>
-            <Link href="/project">{transitions.about}</Link>
-            <Link href="/articles">{transitions.articles}</Link>
+            <Link href="/project">{translations.about}</Link>
+            <Link href="/articles">{translations.articles}</Link>
           </LinkList>
         </nav>
         <Options isOpenMobileMenu={isOpenMobileMenu}>
