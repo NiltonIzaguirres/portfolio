@@ -12,10 +12,12 @@ interface HeaderContainerProps {
 export const HeaderContainer = styled.header<HeaderContainerProps>`
   width: 100%;
   height: 4rem;
+  transition: 0.2s all;
 
   ${(props) =>
     props.fixedHeader &&
     css`
+      z-index: 10;
       position: fixed;
       top: 0;
       left: 0;
@@ -183,7 +185,6 @@ export const Option = styled.li`
       opacity: 0.6;
     }
   }
-
 `;
 
 export const Divider = styled.div`
@@ -192,7 +193,6 @@ export const Divider = styled.div`
   border-radius: 8px;
   opacity: 0.8;
   background: ${(props) => props.theme.colors.primaryMedium};
-
 `;
 
 interface OpenMobileMenu extends OpenMobileMenuProps {}
