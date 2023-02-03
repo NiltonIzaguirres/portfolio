@@ -1,8 +1,10 @@
 import { useThemeMode } from "@/context/ThemeModeContext";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { CgDarkMode } from "react-icons/cg";
 import { IoLanguage, IoMenuOutline, IoCloseOutline } from "react-icons/io5";
+import { headerTranslate } from "@/locale/transition";
 import { Link } from "./Link";
 
 import {
@@ -21,6 +23,14 @@ export function Header() {
   const [fixedHeader, setFixedHeader] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { toggleTheme } = useThemeMode();
+  const { locale, push } = useRouter();
+
+  const currentLocale = locale === "en-US" ? "en-US" : "pt-BR";
+  const transitions = headerTranslate[currentLocale];
+
+  function toggleLanguage() {
+    push("/", "/", { locale: locale === "en-US" ? "pt-BR" : "en-US" });
+  }
 
   function controlNavbar() {
     if (typeof window !== "undefined") {
@@ -61,8 +71,8 @@ export function Header() {
           </Link>
 
           <LinkList isOpenMobileMenu={isOpenMobileMenu}>
-            <Link href="/project">Projetos</Link>
-            <Link href="/articles">Artigos</Link>
+            <Link href="/project">{transitions.about}</Link>
+            <Link href="/articles">{transitions.articles}</Link>
           </LinkList>
         </nav>
         <Options isOpenMobileMenu={isOpenMobileMenu}>
@@ -85,7 +95,7 @@ export function Header() {
             </button>
           </Option>
           <Option>
-            <button>
+            <button onClick={toggleLanguage}>
               <IoLanguage />
             </button>
           </Option>
