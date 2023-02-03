@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { CgDarkMode } from "react-icons/cg";
 import { IoLanguage, IoMenuOutline, IoCloseOutline } from "react-icons/io5";
-import { headerTranslate } from "@/locale/transition";
+import { headerTranslate } from "@/translate/texts";
 import { Link } from "./Link";
 
 import {
