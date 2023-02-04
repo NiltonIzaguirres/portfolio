@@ -59,6 +59,48 @@ export const WelcomeSection = styled.section`
     border-radius: 8px;
     border: 4px solid ${(props) => props.theme.colors.secondary};
   }
+
+  @media only screen and (max-width: 1094px) {
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+
+    & > img {
+      margin: 2.3rem 0;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    & > img {
+      width: 270px;
+      height: 400px;
+    }
+  }
+
+  @media only screen and (max-width: 319px) {
+    & > div:first-of-type {
+      p:first-child {
+        font-size: 1.2rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p:nth-child(3) {
+        font-size: 0.8rem;
+      }
+
+      a {
+        font-size: 1rem;
+      }
+    }
+
+    & > img {
+      width: 200px;
+      height: 400px;
+    }
+  }
 `;
 
 export const ScrollDown = styled.div`
@@ -77,6 +119,10 @@ export const ScrollDown = styled.div`
     justify-content: center;
     font-size: 2rem;
     color: ${(props) => props.theme.colors.textHighlight};
+  }
+
+  @media only screen and (max-width: 1094px) {
+    display: none;
   }
 `;
 
@@ -109,6 +155,24 @@ export const AboutMeSection = styled.section`
     border-radius: 8px;
     border: 4px solid ${(props) => props.theme.colors.secondary};
   }
+
+  @media only screen and (max-width: 1094px) {
+    justify-content: center;
+
+    & > div {
+      max-width: 70%;
+    }
+
+    & > img {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    & > div {
+      max-width: 100%;
+    }
+  }
 `;
 
 export const SkillsSection = styled.section`
@@ -133,7 +197,11 @@ export const ContactSection = styled.section`
   }
 `;
 
-export const ContactInfo = styled.div`
+interface ContactInfoProps {
+  break?: boolean;
+}
+
+export const ContactInfo = styled.div<ContactInfoProps>`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -143,5 +211,25 @@ export const ContactInfo = styled.div`
     margin-left: 1rem;
     font-weight: 500;
     font-size: 1.3rem;
+  }
+
+  @media only screen and (max-width: 900px) {
+    span {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media only screen and (max-width: 778px) {
+    span {
+      margin-left: 0.5rem;
+    }
+
+    ${(props) =>
+      props.break &&
+      css`
+        span {
+          word-break: break-all;
+        }
+      `}
   }
 `;
