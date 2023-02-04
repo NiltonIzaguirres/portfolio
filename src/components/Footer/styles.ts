@@ -12,4 +12,10 @@ export const FooterContainer = styled.footer`
   a {
     margin-bottom: 0.7rem;
   }
+
+  @media only screen and (max-width: 778px) {
+    p {
+      text-align: center;
+        }
+  }
 `
