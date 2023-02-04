@@ -79,12 +79,20 @@ export function Header() {
         </nav>
         <Options isOpenMobileMenu={isOpenMobileMenu}>
           <Option>
-            <a href="https://www.linkedin.com/in/nilton-izaguirres/">
+            <a
+              href="https://www.linkedin.com/in/nilton-izaguirres/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <BsLinkedin />
             </a>
           </Option>
           <Option>
-            <a href="https://github.com/NiltonIzaguirres/">
+            <a
+              href="https://github.com/NiltonIzaguirres/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <BsGithub />
             </a>
           </Option>
