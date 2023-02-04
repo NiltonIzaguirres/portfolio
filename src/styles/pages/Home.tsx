@@ -142,6 +142,6 @@ export const ContactInfo = styled.div`
   span {
     margin-left: 1rem;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 `;
