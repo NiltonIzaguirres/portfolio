@@ -114,3 +114,18 @@ export const footerTranslate = {
     copy: 'Todos os direitos reservados'
   }
 }
+
+export  const fourOhFourTranslate = {
+  "en-US": {
+    title: 'Oops! This page was not found.',
+    text: 'This page was not found, please return to the homepage.',
+    back: 'Back',
+    imageAlt: 'Image of an ET being abducted'
+  },
+  "pt-BR": {
+    title: 'Oops! Esta página não encontrada.',
+    text: 'Está página não foi encontrada, volte clicando no botão abaixo.',
+    back: 'Voltar',
+    imageAlt: 'Imagem de um ET sendo abduzido'
+  }
+}
