@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const DOMAIN = "https://niltonizaguirres.netlify.app/";
+const DOMAIN = "https://niltonizaguirres.netlify.app";
 const DEFAULT_OG_IMAGE =
   "https://cdn.discordapp.com/attachments/878820224546258945/1071199250840559636/portfolio-og.png";
 
