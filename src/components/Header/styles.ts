@@ -64,7 +64,7 @@ export const HeaderContent = styled.div<HeaderContentProps>`
         height: 100vh;
         background: ${props.theme.colors
           .background}E0; // EO is opacity for color in hex
-
+        z-index: 11;
         flex-direction: column;
         justify-content: center;
 
