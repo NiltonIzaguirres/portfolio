@@ -19,6 +19,8 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  html { scroll-behavior: smooth; }
+
   body {
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
