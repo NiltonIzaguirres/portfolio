@@ -23,13 +23,15 @@ export function Header() {
   const [fixedHeader, setFixedHeader] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { toggleTheme } = useThemeMode();
-  const { locale, push } = useRouter();
+  const { locale, pathname, query, asPath, push } = useRouter();
 
   const currentLocale = locale === "en-US" ? "en-US" : "pt-BR";
   const translations = headerTranslate[currentLocale];
 
   function toggleLanguage() {
-    push("/", "/", { locale: locale === "en-US" ? "pt-BR" : "en-US" });
+    push({ pathname, query }, asPath, {
+      locale: locale === "en-US" ? "pt-BR" : "en-US",
+    });
   }
 
   function controlNavbar() {
