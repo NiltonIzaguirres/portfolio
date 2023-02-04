@@ -9,6 +9,7 @@ export const CardContainer = styled.div`
   height: 318px;
   background: ${props => props.theme.colors.backgroundHighlight};
   border: 1px solid ${props => props.theme.colors.primaryMedium};
+  border-radius: 4px;
   margin-bottom: 2rem;
 
   & > svg {
