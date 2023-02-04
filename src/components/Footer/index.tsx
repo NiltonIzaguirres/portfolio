@@ -1,17 +1,24 @@
+import { useRouter } from "next/router";
 import { FooterContainer } from "./styles";
 import { ExternalLink } from "../ExternalLink";
+import { footerTranslate } from "@/translate/texts";
 
 export function Footer() {
+  const { locale } = useRouter();
+
+  const currentLocale = locale === "en-US" ? "en-US" : "pt-BR";
+  const translations = footerTranslate[currentLocale];
+
   return (
     <FooterContainer>
       <ExternalLink
         href="https://github.com/NiltonIzaguirres/portfolio"
         target="_blank"
         rel="noreferrer"
-        text="Código Fonte"
+        text={translations.code}
       />
 
-      <p>Todos os direitos reservados &copy; 2023, Nilton Izaguirres</p>
+      <p>{translations.copy} &copy; 2023, Nilton Izaguirres</p>
     </FooterContainer>
   );
 }

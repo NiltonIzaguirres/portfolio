@@ -103,3 +103,14 @@ export const homeTranslate = {
     }
   }
 }
+
+export const footerTranslate = {
+  "en-US": {
+    code: 'Source code',
+    copy: 'All rights reserved'
+  },
+  "pt-BR": {
+    code: 'Código fonte',
+    copy: 'Todos os direitos reservados'
+  }
+}
