@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CategoryContainer = styled.section`
   h3 {
-    font-size: 2.25rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
   }
 
