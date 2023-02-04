@@ -143,28 +143,5 @@ export const ContactInfo = styled.div`
     margin-left: 1rem;
     font-weight: 500;
     font-size: 1.5rem;
-
-    a {
-      position: relative;
-      transition: 0.2 all;
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 0;
-        bottom: -3px;
-        height: 3px;
-        transition: 0.3s width;
-        border-radius: 8px;
-        background-color: ${(props) => props.theme.colors.secondary};
-      }
-
-      &:hover {
-        &::after {
-          width: 100%;
-        }
-      }
-    }
   }
 `;

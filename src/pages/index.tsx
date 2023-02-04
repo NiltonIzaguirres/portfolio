@@ -32,6 +32,7 @@ import {
 } from "@/styles/pages/Home";
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { FramedIcon } from "@/components/FramedIcon";
+import { ExternalLink } from "@/components/ExternalLink";
 
 export default function Home() {
   const { locale } = useRouter();
@@ -134,9 +135,12 @@ export default function Home() {
             <ContactInfo>
               <FramedIcon icon={<IoMailOutline />} />
               <span>
-                <a href="mailto:niltonizaguirres2003@gmail.com">
-                  niltonizaguirres2003@gmail.com
-                </a>
+                <ExternalLink
+                  href="mailto:niltonizaguirres2003@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  text="niltonizaguirres2003@gmail.com"
+                />
               </span>
             </ContactInfo>
           </Category>
@@ -147,25 +151,23 @@ export default function Home() {
             <ContactInfo>
               <FramedIcon icon={<BsLinkedin />} />
               <span>
-                <a
-                  href="https://www.linkedin.com/in/nilton-izaguirres/"
+                <ExternalLink
+                  href="https://github.com/NiltonIzaguirres/"
                   target="_blank"
                   rel="noreferrer"
-                >
-                  Linkedin
-                </a>
+                  text="Linkedin"
+                />
               </span>
             </ContactInfo>
             <ContactInfo>
               <FramedIcon icon={<BsGithub />} />
               <span>
-                <a
+                <ExternalLink
                   href="https://github.com/NiltonIzaguirres/"
                   target="_blank"
                   rel="noreferrer"
-                >
-                  Github
-                </a>
+                  text="Github"
+                />
               </span>
             </ContactInfo>
           </Category>
