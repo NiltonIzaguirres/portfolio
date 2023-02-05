@@ -73,7 +73,7 @@ export function Header() {
           </Link>
 
           <LinkList isOpenMobileMenu={isOpenMobileMenu}>
-            <Link href="/project">{translations.about}</Link>
+            <Link href="/projects">{translations.projects}</Link>
             <Link href="/articles">{translations.articles}</Link>
           </LinkList>
         </nav>
