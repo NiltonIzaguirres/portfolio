@@ -48,7 +48,11 @@ export function ProjectDisplay({
       </InfoContainer>
       <TechContainer>
         <h4>{projectCardTranslation.tech}</h4>
-        <p>{techs}</p>
+        <p>
+          {techs.map((tech, index) => (
+            <span key={tech + index}>{tech}</span>
+          ))}
+        </p>
       </TechContainer>
       <LinksContainer>
         {isGithub && (

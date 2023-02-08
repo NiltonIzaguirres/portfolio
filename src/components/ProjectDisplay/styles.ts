@@ -49,15 +49,34 @@ export const TechContainer = styled.div`
   }
 
   p {
-    width: 100%;
-    height: 37px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 0.9rem;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    word-break: keep-all;
     font-weight: 500;
+
+    ::-webkit-scrollbar {
+      height: 4px;
+    }
+    ::-webkit-scrollbar-track        { 
+      border-radius: 50px;
+    }
+
+
+    span  {
+      padding: 0.1rem 0.3rem;
+      margin-bottom: 0.3rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      background: ${props => props.theme.colors.primaryMedium};
+      color: ${props => props.theme.colors.buttonText} ;
+      & + span {
+        margin-left: 0.3rem;
+      }
+
+      
+    }
   }
 `;
 
