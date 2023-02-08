@@ -58,6 +58,10 @@ export const DropdownMenuContainer = styled.div<DropdownMenuContainerProps>`
     border-radius: 4px;
     overflow-x: hidden;
 
+    ::-webkit-scrollbar-track        { 
+      border-radius: 50px;
+    }
+
     & > div {
       display: flex;
       justify-content: flex-start;
