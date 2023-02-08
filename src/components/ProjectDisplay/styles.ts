@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components";
 
 export const ProjectDisplayContainer = styled.div`
+  position: relative;
   width: 280px;
   height: 420px;
   display: flex;
@@ -81,7 +82,10 @@ export const TechContainer = styled.div`
 `;
 
 export const LinksContainer = styled.div`
-  width: 100%;
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  width: calc(100% - 1rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
