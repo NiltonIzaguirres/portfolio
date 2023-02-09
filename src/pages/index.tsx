@@ -28,6 +28,7 @@ import {
   Main,
   ScrollDown,
   SkillsSection,
+  SquareAnimation,
   WelcomeSection,
 } from "@/styles/pages/Home";
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
@@ -70,6 +71,19 @@ export default function Home() {
               <BsChevronDoubleDown />
             </Link>
           </ScrollDown>
+
+          <SquareAnimation>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </SquareAnimation>
         </WelcomeSection>
 
         <AboutMeSection id="about">
