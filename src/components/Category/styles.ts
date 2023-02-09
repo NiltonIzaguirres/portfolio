@@ -20,7 +20,6 @@ export const CategoryContainer = styled.section`
   & > div {
     display: grid;
     align-items: center;
-    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax( 272px,1fr));
     gap: 0.5rem;
   }
