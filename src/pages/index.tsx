@@ -86,7 +86,12 @@ export default function Home() {
           </SquareAnimation>
         </WelcomeSection>
 
-        <AboutMeSection id="about">
+        <AboutMeSection
+          id="about"
+          initial={{ translateX: -600, opacity: 0 }}
+          transition={{ delay: 0.6 }}
+          whileInView={{ translateX: 0, opacity: 1 }}
+        >
           <NextImage
             src="https://github.com/niltonizaguirres.png"
             alt={translations.aboutSection.imageAlt}
@@ -104,8 +109,11 @@ export default function Home() {
             )}
           </div>
         </AboutMeSection>
-
-        <SkillsSection>
+        <SkillsSection
+          initial={{ translateX: 600, opacity: 0 }}
+          transition={{ delay: 0.6 }}
+          whileInView={{ translateX: 0, opacity: 1 }}
+        >
           <SubTitle title={translations.skillsSection.title} />
 
           <Category
@@ -132,7 +140,12 @@ export default function Home() {
           </Category>
         </SkillsSection>
 
-        <ContactSection id="contact">
+        <ContactSection
+          id="contact"
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.6 }}
+          whileInView={{ opacity: 1 }}
+        >
           <SubTitle title={translations.contactSection.title} />
 
           <Category

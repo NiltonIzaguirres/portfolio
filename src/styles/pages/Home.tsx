@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
 export const Main = styled.main`
@@ -6,6 +7,7 @@ export const Main = styled.main`
   max-width: 1280px;
   margin: auto;
   padding: 0 2rem;
+  overflow: hidden;
 `;
 
 export const WelcomeSection = styled.section`
@@ -239,7 +241,7 @@ export const ScrollDown = styled.div`
   }
 `;
 
-export const AboutMeSection = styled.section`
+export const AboutMeSection = styled(motion.section)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -253,8 +255,8 @@ export const AboutMeSection = styled.section`
     }
 
     & > p {
-      font-size: 1.3rem;
       font-weight: 500;
+      font-size: 1.3rem;
       line-height: 2rem;
       text-indent: 3rem;
     }
@@ -288,7 +290,7 @@ export const AboutMeSection = styled.section`
   }
 `;
 
-export const SkillsSection = styled.section`
+export const SkillsSection = styled(motion.section)`
   margin-top: 4rem;
 
   & > h2 {
@@ -304,7 +306,7 @@ export const SkillsSection = styled.section`
   }
 `;
 
-export const ContactSection = styled.section`
+export const ContactSection = styled(motion.section)`
   & > h2 {
     margin-bottom: 4rem;
   }
@@ -318,7 +320,7 @@ interface ContactInfoProps {
   break?: boolean;
 }
 
-export const ContactInfo = styled.div<ContactInfoProps>`
+export const ContactInfo = styled(motion.div)<ContactInfoProps>`
   display: flex;
   align-items: center;
   justify-content: flex-start;
