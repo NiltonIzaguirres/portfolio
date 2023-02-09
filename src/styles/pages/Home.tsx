@@ -184,6 +184,10 @@ export const SkillsSection = styled.section`
 
   & > section {
     margin-bottom: 2rem;
+
+    & > div {
+      justify-items: center;
+    }
   }
 `;
 
