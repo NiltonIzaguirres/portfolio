@@ -88,9 +88,10 @@ export default function Home() {
 
         <AboutMeSection
           id="about"
-          initial={{ translateX: -600, opacity: 0 }}
-          transition={{ delay: 0.6 }}
-          whileInView={{ translateX: 0, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.4 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
         >
           <NextImage
             src="https://github.com/niltonizaguirres.png"
@@ -110,9 +111,10 @@ export default function Home() {
           </div>
         </AboutMeSection>
         <SkillsSection
-          initial={{ translateX: 600, opacity: 0 }}
-          transition={{ delay: 0.6 }}
-          whileInView={{ translateX: 0, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.4 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
         >
           <SubTitle title={translations.skillsSection.title} />
 
@@ -143,7 +145,7 @@ export default function Home() {
         <ContactSection
           id="contact"
           initial={{ opacity: 0 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.4 }}
           whileInView={{ opacity: 1 }}
         >
           <SubTitle title={translations.contactSection.title} />
