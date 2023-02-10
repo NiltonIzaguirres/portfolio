@@ -6,9 +6,9 @@ import { Footer } from "@/components/Footer";
 import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const { asPath } = useRouter();
+  const { pathname } = useRouter();
 
-  const isErrorPage = asPath === "/404";
+  const isErrorPage = pathname === "/404";
 
   return (
     <ThemeModeProvider>
