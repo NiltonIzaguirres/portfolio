@@ -22,6 +22,7 @@ export const WelcomeSection = styled.section`
 
   & > div:first-of-type {
     max-width: 42rem;
+    z-index: 2;
 
     p:first-child {
       font-weight: 600;
