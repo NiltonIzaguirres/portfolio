@@ -28,7 +28,7 @@ export const homeTranslate = {
     aboutSection: {
       title: "About me",
       descriptions: [
-        "Pleasure my name is Nilton and I'm currently 19 years old, with only 15 years old I started learning hacking, but I fell in love with creating solutions and solving problems right when I started learning my first programming language, from that moment I started to learn and develop myself each more in software development.",
+        "Pleasure my name is Nilton and I'm currently 19 years old, with only 15 years old I started learning hacking, but I fell in love with creating solutions and solving problems right when I started learning my first programming language, from that moment I started to learn and develop myself every more in software development.",
         "I'm currently studying for a bachelor's degree in computer science, in addition to specializing more and more as a software developer and always looking to learn more.",
       ],
       imageAlt: "My Github Image",
@@ -77,7 +77,7 @@ export const homeTranslate = {
     aboutSection: {
       title: "Sobre mim",
       descriptions: [
-        "Prazer meu nome é Nilton e atualmente tenho 19 anos, com apenas 15 anos comecei aprendendo hacking, mas me apaixonei por criar soluções e resolver problemas logo quando comecei a aprender minha primeira linguagem de programação, a partir desde momento comecei a aprender e me desenvolver cada vez mais em desenvolvimento de software.",
+        "Prazer meu nome é Nilton e atualmente tenho 19 anos, com apenas 15 anos comecei aprendendo hacking, mas me apaixonei por criar soluções e resolver problemas logo quando comecei a aprender minha primeira linguagem de programação, a partir deste momento comecei a aprender e me desenvolver cada vez mais em desenvolvimento de software.",
         "Atualmente estou cursando bacharel em ciência da computação, além de estar me especializando cada vez mais como desenvolvedor de software e estar sempre buscando aprender mais.",
       ],
       imageAlt: "Minha imagem do Github",
