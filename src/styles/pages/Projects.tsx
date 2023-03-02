@@ -47,12 +47,18 @@ export const Presentation = styled.div`
 
   @media only screen and (max-width: 760px) {
     padding: 0.5rem 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     div {
       max-width: 100%;
     }
+  }
+
+  @media only screen and (max-width: 340px) {
     img {
-      display: none;
+      width: 200px;
     }
   }
 `;
