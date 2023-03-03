@@ -37,6 +37,10 @@ import { ExternalLink } from "@/components/ExternalLink";
 
 export default function Home() {
   const { locale } = useRouter();
+  const animationVariants = {
+    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0 },
+  };
 
   const currentLocale = locale === "en-US" ? "en-US" : "pt-BR";
   const translations = homeTranslate[currentLocale];
@@ -110,12 +114,7 @@ export default function Home() {
             )}
           </div>
         </AboutMeSection>
-        <SkillsSection
-          initial={{ opacity: 0 }}
-          transition={{ delay: 0.4 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
+        <SkillsSection>
           <SubTitle title={translations.skillsSection.title} />
 
           <Category
@@ -144,9 +143,11 @@ export default function Home() {
 
         <ContactSection
           id="contact"
-          initial={{ opacity: 0 }}
-          transition={{ delay: 0.4 }}
-          whileInView={{ opacity: 1 }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.2 }}
+          variants={animationVariants}
         >
           <SubTitle title={translations.contactSection.title} />
 
