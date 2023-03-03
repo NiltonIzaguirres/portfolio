@@ -162,7 +162,7 @@ export default function Home() {
                 {translations.contactSection.categories.contact.country}
               </span>
             </ContactInfo>
-            <ContactInfo break>
+            <ContactInfo $breakWord>
               <FramedIcon icon={<IoMailOutline />} />
               <span>
                 <ExternalLink

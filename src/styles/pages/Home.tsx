@@ -318,7 +318,7 @@ export const ContactSection = styled(motion.section)`
 `;
 
 interface ContactInfoProps {
-  break?: boolean;
+  $breakWord?: boolean;
 }
 
 export const ContactInfo = styled(motion.div)<ContactInfoProps>`
@@ -345,7 +345,7 @@ export const ContactInfo = styled(motion.div)<ContactInfoProps>`
     }
 
     ${(props) =>
-      props.break &&
+      props.$breakWord &&
       css`
         span {
           word-break: break-all;
