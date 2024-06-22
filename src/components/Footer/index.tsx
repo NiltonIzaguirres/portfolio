@@ -18,7 +18,7 @@ export function Footer() {
         text={translations.code}
       />
 
-      <p>{translations.copy} &copy; 2023, Nilton Izaguirres</p>
+      <p>{translations.copy} &copy; 2024, Nilton Izaguirres</p>
     </FooterContainer>
   );
 }
