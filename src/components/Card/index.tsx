@@ -1,4 +1,3 @@
-import { createElement } from "react";
 import { CardContainer } from "./styles";
 
 interface CardProps {

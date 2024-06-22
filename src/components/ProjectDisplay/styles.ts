@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
 export const ProjectDisplayContainer = styled(motion.div)`
   position: relative;

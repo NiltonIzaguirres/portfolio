@@ -1,4 +1,3 @@
-import { useThemeMode } from "@/context/ThemeModeContext";
 import { FourOhFourContainer } from "@/styles/pages/404";
 import { fourOhFourTranslate } from "@/translate/texts";
 import Image from "next/image";

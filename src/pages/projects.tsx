@@ -14,7 +14,7 @@ import {
 import { TbStack, TbStack2 } from "react-icons/tb";
 import { Input } from "@/components/Input";
 import { techTags } from "@/shared/techTags";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ProjectDisplay } from "@/components/ProjectDisplay";
 
 export default function Project() {

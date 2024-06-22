@@ -1,10 +1,5 @@
 import { HTMLAttributes, useState } from "react";
 import {
-  IoLogoCss3,
-  IoLogoFigma,
-  IoLogoHtml5,
-  IoLogoJavascript,
-  IoLogoReact,
   IoOptions,
 } from "react-icons/io5";
 import { DropdownMenuContainer } from "./styles";
