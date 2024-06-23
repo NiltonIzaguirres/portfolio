@@ -5,7 +5,6 @@ import {
   LinksContainer,
   InfoContainer,
   ProjectDisplayContainer,
-  TechContainer,
 } from "./styles";
 
 interface ProjectCardTranslationProps {
@@ -28,7 +27,6 @@ export function ProjectDisplay({
   name,
   slug,
   description,
-  techs,
   isGithub,
   preview,
   projectCardTranslation,
@@ -55,14 +53,6 @@ export function ProjectDisplay({
         <h3>{name}</h3>
         <p>{description}</p>
       </InfoContainer>
-      <TechContainer>
-        <h4>{projectCardTranslation.tech}</h4>
-        <p>
-          {techs.map((tech, index) => (
-            <span key={tech + index}>{tech}</span>
-          ))}
-        </p>
-      </TechContainer>
       <LinksContainer>
         {isGithub && (
           <a
