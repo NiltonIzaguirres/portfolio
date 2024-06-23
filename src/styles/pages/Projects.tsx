@@ -87,11 +87,17 @@ export const Projects = styled.div`
     width: 100%;
     min-height: 400px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     grid-area: auto;
     gap: 1rem;
     align-items: center;
     justify-items: center;
     margin-bottom: 2rem;
+  }
+
+  @media only screen and (max-width: 470px) { 
+    & > div:last-of-type {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
   }
 `;

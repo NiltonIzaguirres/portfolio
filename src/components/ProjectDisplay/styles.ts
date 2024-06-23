@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ProjectDisplayContainer = styled(motion.div)`
   position: relative;
-  width: 280px;
+  width: 360px;
   height: 420px;
   display: flex;
   flex-direction: column;
@@ -16,6 +16,11 @@ export const ProjectDisplayContainer = styled(motion.div)`
 
   img {
     border-radius: 4px;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 470px) { 
+    width: 280px;
   }
 `
 
