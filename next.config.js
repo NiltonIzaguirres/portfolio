@@ -8,6 +8,9 @@ const nextConfig = {
     locales: ['en-US', 'pt-BR'],
     defaultLocale: 'en-US',
   },
+  // env: {
+
+  // }
   compiler: {
     styledComponents: true
   }

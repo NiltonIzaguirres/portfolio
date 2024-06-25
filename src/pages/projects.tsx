@@ -14,10 +14,17 @@ import {
 import { TbStack, TbStack2 } from "react-icons/tb";
 import { Input } from "@/components/Input";
 import { techTags } from "@/shared/techTags";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ProjectDisplay } from "@/components/ProjectDisplay";
+import { GetStaticProps } from "next";
+import { ProjectTypes } from "@/@types/project";
 
-export default function Project() {
+
+interface ProjectProps {
+  projects: ProjectTypes[]
+}
+
+export default function Project({ projects }: ProjectProps) {
   const [filter, setFilter] = useState({
     search: "",
     language: "",
@@ -29,11 +36,11 @@ export default function Project() {
   const currentLocale = locale === "en-US" ? "en-US" : "pt-BR";
   const translations = projectsTranslate[currentLocale];
   const [filteredProjects, setFilteredProjects] = useState(
-    translations.projects
+    projects
   );
 
   function handleFilter(newFilterValue: typeof filter) {
-    const filteredSearch = translations.projects.filter((project) =>
+    const filteredSearch = projects.filter((project) =>
       project.name
         .toLocaleLowerCase()
         .includes(newFilterValue.search.toLocaleLowerCase())
@@ -169,4 +176,31 @@ export default function Project() {
       </Main>
     </>
   );
+}
+
+
+
+// ssg
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  let queryLocale = ''
+  let projects = []
+
+  if (locale === 'pt-BR') {
+    queryLocale = 'ptBR'
+  } else {
+    queryLocale = 'enUS'
+  }
+
+  try {
+    projects = await fetch(`${process.env.API_URL}/projects?locale=${queryLocale}`).then(res => res.json())
+  } catch(e) {
+    console.error(e)
+  }
+
+  return {
+    props: {
+      projects
+    },
+    revalidate: 60 * 60 * 24 * 7 // 7 days
+  }
 }
