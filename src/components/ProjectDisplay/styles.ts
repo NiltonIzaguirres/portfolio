@@ -47,6 +47,27 @@ export const InfoContainer = styled.div`
   }
 `;
 
+export const APICode = styled.div`
+  width: 100%;
+  position: absolute;
+  left: 0.6rem;
+  bottom: 3rem;
+  width: calc(100% - 1rem);
+  display: flex;
+
+  a {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: ${props => props.theme.colors.secondary}
+    
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+
+`;
+
 export const LinksContainer = styled.div`
   position: absolute;
   left: 0.5rem;

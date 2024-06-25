@@ -5,12 +5,14 @@ import {
   LinksContainer,
   InfoContainer,
   ProjectDisplayContainer,
+  APICode,
 } from "./styles";
 import { ProjectTypes } from "@/@types/project";
 
 interface ProjectCardTranslationProps {
   tech: string;
   github: string;
+  apiGithub: string;
   preview: string;
 }
 
@@ -23,6 +25,7 @@ export function ProjectDisplay({
   slug,
   description,
   isGithub,
+  isGithubAPI,
   preview,
   projectCardTranslation,
 }: ProjectDisplayProps) {
@@ -48,6 +51,18 @@ export function ProjectDisplay({
         <h3>{name}</h3>
         <p>{description}</p>
       </InfoContainer>
+      {isGithubAPI && (
+        <APICode
+        >
+          <a
+            href={isGithubAPI}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {projectCardTranslation.apiGithub}
+          </a>
+        </APICode>
+      )}
       <LinksContainer>
         {isGithub && (
           <a

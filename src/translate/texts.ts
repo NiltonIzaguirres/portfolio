@@ -158,6 +158,7 @@ export const projectsTranslate = {
     projectCard: {
       tech: 'Technologies',
       github: 'Source code',
+      apiGithub: 'API Code',
       preview: 'Preview'
     }
   },
@@ -179,8 +180,9 @@ export const projectsTranslate = {
     },
     projectCard: {
       tech: 'Tecnologias',
+      apiGithub: 'Código da API',
       github: 'Código fonte',
-      preview: 'Preview'
+      preview: 'Visualizar'
     }
   },
 };
