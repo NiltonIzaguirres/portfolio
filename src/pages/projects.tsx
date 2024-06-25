@@ -162,12 +162,7 @@ export default function Project({ projects }: ProjectProps) {
             {filteredProjects.map((project) => (
               <ProjectDisplay
                 key={project.name}
-                slug={project.slug}
-                name={project.name}
-                description={project.description}
-                isGithub={project.isGithub}
-                preview={project.preview}
-                techs={project.techs}
+                {...project}
                 projectCardTranslation={translations.projectCard}
               />
             ))}

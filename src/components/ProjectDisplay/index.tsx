@@ -6,6 +6,7 @@ import {
   InfoContainer,
   ProjectDisplayContainer,
 } from "./styles";
+import { ProjectTypes } from "@/@types/project";
 
 interface ProjectCardTranslationProps {
   tech: string;
@@ -13,13 +14,7 @@ interface ProjectCardTranslationProps {
   preview: string;
 }
 
-interface ProjectDisplayProps {
-  name: string;
-  slug: string;
-  description: string;
-  techs: string[];
-  isGithub: boolean;
-  preview: string;
+interface ProjectDisplayProps extends ProjectTypes {
   projectCardTranslation: ProjectCardTranslationProps;
 }
 
